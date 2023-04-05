@@ -30,7 +30,6 @@ Instead, separate text by two newlines to start a new paragraph.
         % The image takes up 20 percent of the page width used by text.
         \includegraphics[width=0.2\textwidth]{figures/lightbulb.jpeg}
     \end{center}
-    %\caption{Captions number correctly regardless of your chosen command.}
     \caption{I guess Edison's work \textit{does} outshine mine\ldots }
     \label{fig:wrapped_figure}
 \end{wrapfigure}
@@ -43,7 +42,7 @@ Equations are written like
     \label{eq:equation_name}
     E = mc^2, 
 \end{equation}
-and the amsmath (American Math Society) style is used to format equations in the document. Alternatively, math can be written in-text like so: $E=mc^2$. 
+and the amsmath (American Math Society) style is used to format equations in the template. Alternatively, math can be written in-text like so: $E=mc^2$. 
 
 Chemical equations are easy to include thanks to the mhchem package. 
 \begin{equation}
@@ -52,26 +51,26 @@ Chemical equations are easy to include thanks to the mhchem package.
     H2O + CO2 <=> H2CO3
     }
 \end{equation}
-If you'd prefer \textit{not} to number an equation (whether mathematical or chemical), use \$\$:
+If you'd prefer \textit{not} to number an equation (whether mathematical or chemical), use \$\$.
 $$ \ce{ A+(aq) + B-(aq) -> AB(s) } $$
 
-Reference sources \textit{within} the document with \textbackslash ref\{label\_defined\_in\_text\}. This can be done with multiple objects, e.g. Fig.~\ref{fig:figure_name}, Eq.~\ref{eq:equation_name}, and Section~\ref{sec:introduction}. 
+Reference sources \textit{within} the document using \textbackslash ref\{label\_defined\_in\_tex\_file\}. This can be done with multiple objects, e.g. Fig.~\ref{fig:figure_name}, Eq.~\ref{eq:equation_name}, and Section~\ref{sec:introduction}. 
 
-Reference outside sources with \textbackslash cite\{name\_in\_refs.bib\}. Conveniently, references~\cite{youssef_scalable_2021} automatically~\cite{sood_coupling_2022} number~\cite{schuette_decorrelating_2023} according~\cite{schuette_applying_2020} to~\cite{youssef_scalable_2023} order~\cite{schuette_efficient_2023} of~\cite{zhang_topology_2015} appearance~\cite{zhang_shape_2016}. Also, if multiple citations are included at once, then sequential articles are formatted with a dash to save space~\cite{sood_coupling_2022,youssef_scalable_2021,schuette_decorrelating_2023,youssef_scalable_2023,schuette_efficient_2023,zhang_topology_2015,zhang_shape_2016,schuette_applying_2020}. This is done according to the \textit{J. Am. Chem. Soc.} (with title) formatting guidelines. 
+Reference outside sources with \textbackslash cite\{name\_in\_refs.bib\}. Conveniently, references~\cite{youssef_scalable_2021} automatically~\cite{sood_coupling_2022} number~\cite{schuette_decorrelating_2023} according~\cite{schuette_applying_2020} to~\cite{youssef_scalable_2023} order~\cite{schuette_efficient_2023} of~\cite{zhang_topology_2015} appearance~\cite{zhang_shape_2016}. Also, if multiple citations are included at once, then sequential articles are formatted with a dash to save space, for example~\cite{sood_coupling_2022,youssef_scalable_2021,schuette_decorrelating_2023,youssef_scalable_2023,schuette_efficient_2023,zhang_topology_2015,zhang_shape_2016,schuette_applying_2020}. (Note that it also places the citations on the correct side of punctuation marks!) All of these in-text citation rules follow the \textit{J. Am. Chem. Soc.} (with title) formatting guidelines. 
 
 You can add subsections to help break up your report. For example, Subsection~\ref{subsec:format} discusses a bit about the formatting of this document. 
 
 \subsection{The Formatting Guidelines}
 \label{subsec:format}
 
-This document uses letter paper, which is sized 8.5''$\times$ 11'', and has 1 inch margins everywhere. It uses single-spaced 12 point Times Roman font for all text. Page numbers are included in the bottom right and shown with 12 point Times Roman font. 
+This document uses letter paper, which has dimensions 8.5''$\times$ 11'', and it uses 1 inch margins everywhere. All text is single-spaced with 12 point Times Roman font. Page numbers are included in the bottom right and are also shown with 12 point Times Roman font. 
 
-In lieu of a cover page, the report's title and your name, lab, department, and oral exam date can be inserted in the header of the file main.tex, and they're displayed as in this template. (Comments walk you through these steps and begin with \%.) Similarly, the file will currently save as Lastname-Firstname-Year.pdf, but you can change this to your information by modifying the text on line 39 of main.tex. Otherwise, the only change you should need to make to main.tex is deleting lines 71 and 72, which will remove this tutorial information. 
+In lieu of a cover page, the report's title and your name, lab, department, and oral exam date can be inserted in the header of the file main.tex, and they're displayed as in this Lastname-Firstname-Year.pdf. (Comments walk you through these steps and begin with \%.) Similarly, the file will currently save as Lastname-Firstname-Year.pdf, but you can change this to your information by modifying the text on line 39 of main.tex. Otherwise, the only change you should need to make to main.tex is deleting lines 71 and 72, which will remove this tutorial section and its associated references. 
 
-The sections for your written report should be written in files 1-6 in the sections folder. Placing different information in the different files makes it easier to independently save multiple versions of each section, replace them, rearrange them, etc., rather than always needing to modify the main file. Simply remove the existing text, which inserts lorem ipsum text as a placeholder. 
+Each section of your report should be typed in the corresponding file in the sections folder. Partitioning the information in the different files makes it easier to independently save multiple versions of each section, replace them, rearrange them, etc., rather than always needing to modify the main file. Simply remove the existing \textbackslash lipsum commands, which insert lorem ipsum text as a placeholder, and get to writing! 
 
 Image files can be placed in the figures folder to maintain organization. Replace gantt\_chart.png in that folder with your own, which is probably easiest to make as a table in Microsoft Word. 
 
-Place your references in refs.bib using Bib\TeX format. This can easily be done with \href{https://www.zotero.org/}{Zotero}, which will provide the Bib\TeX citation given just the DOI number. Conveniently, Zotero can be \href{https://www.overleaf.com/learn/how-to/How_to_link_your_Overleaf_account_to_Mendeley_and_Zotero}{directly linked to your Overleaf} so that the references are also directly imported, meaning you don't even need to copy/paste the references. If you do this, you'll need to change line 17 of the main text from \textbackslash addbibresource\{refs.bib\} to \textbackslash addbibresource\{refs.bib,imported\_file.bib\} or \textbackslash addbibresource\{imported\_file\_name.bib\}. NOTE: Only bibliographic items references in the text via the \textbackslash cite\{\} command will appear in the bibliography at the end of the document. 
+Place your references in refs.bib using Bib\TeX format. This can easily be done with \href{https://www.zotero.org/}{Zotero}, which will provide the Bib\TeX citation given just the DOI number. Conveniently, Zotero can be \href{https://www.overleaf.com/learn/how-to/How_to_link_your_Overleaf_account_to_Mendeley_and_Zotero}{directly linked to your Overleaf} so that the references are also directly imported, meaning you don't even need to copy/paste the references. If you do this, you'll need to change line 17 of the main text from \textbackslash addbibresource\{refs.bib\} to \textbackslash addbibresource\{refs.bib,imported\_file.bib\}. NOTE: Only bibliographic items referenced in the text via the \textbackslash cite\{\} command will appear in the bibliography at the end of the document. 
 
 
