@@ -1,0 +1,136 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Load the document template. 
+\documentclass{report}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% By default, the template loads several 
+% packages you are likely to need or that 
+% were required to format the document: 
+    % geometry, calc, hyperref, mathptmx, amsmath,
+    % mhchem, inputenc, graphicx, setspace, titlesec,
+    % fancyhdr, biblatex
+% Other packages can be loaded as:
+\usepackage{lipsum}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Tells you which file containts the bibtex 
+\addbibresource{refs.bib}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Insert some required information here.
+\title{Summary of Research Progress:\\A \LaTeX\ Template to Help You With Your Quals}
+\author{Your Name}
+\lab{Professor Sandy Cheeks Research Laboratory}
+\department{Department of Chemistry, Massachusetts Institute of Technology, Cambridge, MA, USA}
+% You can simply replace \today with the date of your oral.
+\date{\today}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% This makes the above definitions values callable 
+% in the report.cls file. Leave it be. 
+\makeatletter
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Set pdf information. Be sure to replace
+% the PDF title with the correct information. 
+\hypersetup{
+    pdfsubject = {Qualifying Exam Written Report: \@author},
+    pdftitle = {Lastname-Firstname-Year.pdf},
+    pdfauthor = {\@author},
+    colorlinks=true,
+    linkcolor=black,
+    filecolor=magenta,
+    urlcolor=cyan,
+    citecolor=black
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Begin document
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+
+% Print the formatted title, name, affiliations, date. 
+\maketitle
+
+% Create a bookmark in the PDF for each of the sections
+\pdfbookmark[section]{\contentsname}{toc}
+
+% Force the page number of the first page to the bottom right.
+% Without this, the fancy pagestyle starts on the second page.
+\thispagestyle{fancy}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Write each section in the specified file in the sections folder. 
+% Placing different information in the different files
+% makes it easier to independently save multiple versions of each section, 
+% replace them, rearrange them, etc., rather than always needing to
+% modify the master. 
+% The example text contained in the pdf, for example, can be removed by deleting the following two lines. 
+\section{Some Simple Commands}
+\input{sections/0_example_uses}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Write each section in the specified file in the sections folder. 
+% Placing different information in the different files
+% makes it easier to independently save multiple versions of each section, 
+% replace them, rearrange them, etc., rather than always needing to
+% modify the master 
+\section{Long-Term Objective}
+\label{sec:objective}
+\input{sections/1_objective}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Introduction}
+\label{sec:introduction}
+Citations~\cite{youssef_scalable_2021} automatically~\cite{sood_coupling_2022} number~\cite{schuette_decorrelating_2023} according~\cite{schuette_applying_2020} to~\cite{youssef_scalable_2023} order~\cite{schuette_efficient_2023} of~\cite{zhang_topology_2015} appearance~\cite{zhang_shape_2016}.
+
+\input{sections/2_introduction}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Progress Report}
+\label{sec:progress_report}
+\input{sections/3_progress_report}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Plan for Upcoming Research}
+\label{sec:plan_upcoming}
+\input{sections/4_plan_upcoming}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Gantt Chart for Future Planning}
+\label{sec:gantt_chart_text}
+\input{sections/5_gantt_chart_text}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Contributions and Acknowledgements}
+\label{sec:contribution_acknowledgements}
+\input{sections/6_contribution_acknowledgements}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Per the instructions, the Gantt chart can be placed on 
+% a different page that doesn't count towards the total. 
+\newpage
+\section{Gantt Chart}
+\label{sec:gantt}
+
+% Places text before the figure to ensure it appears after the section header
+\textcolor{white}{.}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\textwidth]{figures/gantt_chart.png}
+    %\caption{Caption}
+    \label{fig:gantt_chart}
+\end{figure}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Place the references on a new page
+\newpage
+\printbibliography
+
+
+\end{document}
