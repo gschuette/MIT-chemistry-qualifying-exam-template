@@ -13,9 +13,8 @@ If you're new to LaTeX, I highly recommend using Overleaf as your LaTeX editor. 
 ### Uploading the Template to Overleaf
 There are multiple ways to copy the template to Overleaf, e.g. copy/pasting files, but in my opinion, the two following approaches are easiest:
 
-*If you have a GitHub account:*, you can clone this repository to yours 
-ways are is to  There is a [quickguide](https://www.overleaf.com/learn/how-to/Using_Git_and_GitHub) provided by Overleaf. (See the "Creating a new Overleaf project from a GitHub repository" headline.) In summary: 
-0.  Fork this repository so it appears on your GitHub account. (I'll assume you know how to do this.) 
+*If you have a GitHub account*, you can clone this repository and place it in your account. You can then sync the repo with Overleaf, which provides a [quickguide](https://www.overleaf.com/learn/how-to/Using_Git_and_GitHub) to do this. (See the "Creating a new Overleaf project from a GitHub repository" headline.) In summary: 
+0.  Clone this repository so it appears on your GitHub account. (I'll assume you know how to do this. Note: If you _fork_ the account, the repository will be public!) 
 1.  Open [Overleaf](https://www.overleaf.com/) and log into your account. 
 2.  Select "New Project" and choose "Import from GitHub" from the dropdown menu. 
 3.  Select "Import from GitHub" and choose the fork you just made.  
