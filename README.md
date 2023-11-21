@@ -5,7 +5,7 @@
 LaTeX provides many advantages over other word processors while writing the written report as part of your qualifying exam, such as easy (and pretty) equation editing, effective tools to format of chemical equations and reactions, automatic formatting and ordering of citations, etc. However, formatting the LaTeX document itself according to the provided guidelines can be very tedious, especially if you have little experience using LaTeX. This template solves that problem, allowing you to focus on the science *and* reap the benefits of LaTeX! 
 
 ### Choosing a LaTeX Editor (*cough* Use Overleaf! *cough*)
-If you're new to LaTeX, I highly recommend using Overleaf as your LaTeX editor. As an MIT student, there isn't a comparable alternative. Benefits include: 
+If you're new to LaTeX, I highly recommend using Overleaf as your LaTeX editor. 
 1.  [MIT provides a premium subscription to all students](https://www.overleaf.com/edu/mit), so you have access to many convenient features; several are mentioned in the template itself. 
 2.  Overleaf automatically backs up to the cloud and can be accessed from a browser on any computer, so you don't have to worry about losing work. 
 3.  A vast number of LaTeX packages (including all packages necessary to use this template) are pre-installed, so you don't need to fiddle with the installing packages. 
