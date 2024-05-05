@@ -41,6 +41,9 @@
 % Provides many useful optional arguments for the \includegraphics command
 \RequirePackage{graphicx}
 
+% Draw Gantt Chart on LaTeX
+\RequirePackage{pgfgantt}
+
 %%%%%%%%%%%%%%%%%%%%%%%%%
 % Formatting
 %%%%%%%%%%%%%%%%%%%%%%%%%
@@ -135,3 +138,9 @@
 
 % Used to wrap text around figures
 \RequirePackage{wrapfig}
+
+% Add official MIT colors
+% See: https://brand.mit.edu/color
+\definecolor{mit_red}{HTML}{750014}
+\definecolor{mit_silvergray}{HTML}{8b959e}
+\definecolor{mit_brightred}{HTML}{ff1423}
