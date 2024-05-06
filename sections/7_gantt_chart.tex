@@ -1,0 +1,31 @@
+\begin{center}
+\begin{ganttchart}[
+expand chart=\textwidth,
+time slot format=isodate-yearmonth,
+time slot unit=month,
+newline shortcut=true,
+bar/.append style={fill=mit_red, rounded corners=5pt},
+bar label node/.append style=%
+{align=left}
+]{2024-5}{2025-4} % time range (year-month) of the gantt chart
+  \label{fig:gantt}
+  \gantttitlecalendar{year, month} \\
+
+% Gantt chart content starts here
+  \ganttbar{Second Year Oral and Written Exam}{2024-05}{2024-05}
+  \ganttnewline[thick, mit_silvergray] % line that divides between entries
+  \ganttbar{%
+  Surprise Everyone in the World \ganttalignnewline
+  with Ground-breaking Discoveries%
+  }{2024-05}{2024-06} \\ % to break line within the gantt chart entry, decorate with percent symbol and like above
+  \ganttbar{Write Manuscript}{2024-06}{2024-08}\\
+  \ganttbar{Present at a Conference}{2024-08}{2024-08}
+  \ganttnewline[thick, mit_silvergray]
+  \ganttbar{%
+  Discover a Highly Effective \ganttalignnewline
+  Stock Market Prediction Model%
+  }{2024-08}{2024-12}\\
+  \ganttbar{Graduate Early
+  }{2025-1}{2025-1}
+\end{ganttchart}
+\end{center}
